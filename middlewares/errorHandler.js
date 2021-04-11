@@ -9,7 +9,7 @@ const notFound = (req, res, next) => {
 // Catching all error and sending JSON response
 const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode || 500;
-  res.status(statusCode).json({
+  res.status(res.statusCode).json({
     Error: {
       message: err.message,
       stack: process.env.NODE_ENV === "development" ? err.stack : null,
