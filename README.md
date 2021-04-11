@@ -4,6 +4,24 @@ This is a quick starter project for Node JS, which contained an MVC architecture
 
 ## Project Structure [MVC architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
+- Models - The model is responsible for managing the data of the application. It receives user input from the controller.
+
+- Views - The view renders presentation of the model in a particular format.
+
+- Controllers - The controller responds to the user input and performs interactions on the data model objects. The controller receives the input, optionally validates it and then passes the input to the model.
+
+- Routes - Routing with Express in Node: Express. js has an “app” object corresponding to HTTP. We define the routes by using the methods of this “app” object. This app object specifies a callback function, which is called when a request is received.
+
+- Utils - Best way to write the helper function in this folder.
+
+- Middlewares - The purpose of a middleware is to extract a common controller code, which should be executed on multiple requests and usually modifies the request and/or the response objects.
+
+* Startups - This folder contains all the files which are responsible for our application start-up.
+
+- Public - Best way to serve all our static files.
+
+* .env - Dotenv is a zero-dependency module that loads environment variables from a . env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
+
 ### ES Modules in Node
 
 We us ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
@@ -14,7 +32,7 @@ You can also install and setup Babel if you would like.
 
 ### Env Variables
 
-Create a .env file in then root and add the following
+Create a .env file in then root and add the following and necessary configurations
 
 ```
 NODE_ENV = development
@@ -35,9 +53,6 @@ npm install
 ```
 # Run backend (:5000)
 npm run dev
-
-# Build only
-npm run build
 
 ```
 
